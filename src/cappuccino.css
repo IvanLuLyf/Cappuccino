@@ -1,7 +1,33 @@
 :root {
+    --red: #dc3545;
+    --red-2: #f53748;
+    --pink: #e83e8c;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
     --blue: #409eff;
-    --chino: #E1E1F5;
+    --blue-2: #3f93f3;
+    --purple: #6f42c1;
+    --chino: #E1E1FA;
     --chino-2: #AFAFE1;
+}
+
+.bcu {
+    --theme: var(--chino);
+    --theme-2: var(--chino-2);
+    --text: #9494c5;
+}
+
+.bcu.red {
+    --theme: var(--red);
+    --theme-2: var(--red-2);
+    --text: white;
+}
+
+.bcu.blue {
+    --theme: var(--blue);
+    --theme-2: var(--blue-2);
+    --text: white;
 }
 
 .bcu.btn {
@@ -9,9 +35,9 @@
     line-height: 1;
     white-space: nowrap;
     cursor: pointer;
-    background: #fff;
-    border: 1px solid var(--chino);
-    color: #606266;
+    background: var(--theme);
+    border: 1px solid var(--theme);
+    color: var(--text);
     -webkit-appearance: none;
     text-align: center;
     box-sizing: border-box;
@@ -19,16 +45,62 @@
     margin: 0;
     transition: .1s;
     font-weight: 500;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     padding: 12px 20px;
     font-size: 14px;
     border-radius: 4px;
 }
 
 .bcu.btn:hover {
-    background: var(--chino);
-    border: 1px solid var(--chino-2);
-    color: var(--chino-2);
+    background: var(--theme-2);
+    border: 1px solid var(--theme-2);
+    color: var(--text);
+}
+
+.bcu.btn.outline {
+    background: transparent;
+    color: var(--theme);
+}
+
+.bcu.btn.outline:hover {
+    background: var(--theme);
+    color: var(--text);
+}
+
+.bcu.btn.round {
+    border-radius: 30px;
+}
+
+.bcu.btn.rect {
+    border-radius: 0;
+}
+
+.bcu.ani-bound:hover {
+    animation: bound 1.0s linear 0s 1;
+}
+
+@keyframes bound {
+    0% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
+    10% {
+        transform: scale(1.1, 0.9) translate(0%, 1%);
+    }
+    40% {
+        transform: scale(1.2, 0.8) translate(0%, 4%);
+    }
+    50% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
+    60% {
+        transform: scale(0.9, 1.2) translate(0%, -50%);
+    }
+    75% {
+        transform: scale(0.9, 1.2) translate(0%, -5%);
+    }
+    85% {
+        transform: scale(1.2, 0.8) translate(0%, 4%);
+    }
+    100% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
 }
