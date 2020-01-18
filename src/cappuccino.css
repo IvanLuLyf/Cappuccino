@@ -1,37 +1,55 @@
 :root {
-    --red: #dc3545;
-    --red-2: #f53748;
-    --pink: #e83e8c;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --blue: #409eff;
-    --blue-2: #3f93f3;
-    --purple: #6f42c1;
-    --chino: #E1E1FA;
-    --chino-2: #AFAFE1;
+    --bcu-red: #dc3545;
+    --bcu-red-light: #f53748;
+    --bcu-red-dark: #b62a38;
+    --bcu-pink: #e83e8c;
+    --bcu-pink-light: #ff40a1;
+    --bcu-pink-dark: #ce3e76;
+    --bcu-orange: #fd7e14;
+    --bcu-orange-light: #ffa300;
+    --bcu-orange-dark: #e97514;
+    --bcu-yellow: #ffc107;
+    --bcu-green: #28a745;
+    --bcu-blue: #409eff;
+    --bcu-blue-light: #3f93f3;
+    --bcu-purple: #6f42c1;
+    --bcu-chino: #E1E1FA;
+    --bcu-chino-dark: #AFAFE1;
 }
 
 .bcu {
-    --theme: var(--chino);
-    --theme-2: var(--chino-2);
+    --theme: var(--bcu-chino);
+    --theme-2: var(--bcu-chino-dark);
     --text: #9494c5;
 }
 
 .bcu.red {
-    --theme: var(--red);
-    --theme-2: var(--red-2);
+    --theme: var(--bcu-red);
+    --theme-2: var(--bcu-red-light);
+    --text: white;
+}
+
+.bcu.pink {
+    --theme: var(--bcu-pink);
+    --theme-2: var(--bcu-pink-light);
+    --text: white;
+}
+
+.bcu.orange {
+    --theme: var(--bcu-orange);
+    --theme-2: var(--bcu-orange-light);
     --text: white;
 }
 
 .bcu.blue {
-    --theme: var(--blue);
-    --theme-2: var(--blue-2);
+    --theme: var(--bcu-blue);
+    --theme-2: var(--bcu-blue-light);
     --text: white;
 }
 
 .bcu.btn {
     display: inline-block;
+    box-shadow: none;
     line-height: 1;
     white-space: nowrap;
     cursor: pointer;
@@ -62,6 +80,18 @@
 }
 
 .bcu.btn.outline:hover {
+    background: var(--theme);
+    color: var(--text);
+}
+
+.bcu.btn.inverse {
+    background: black;
+    color: var(--theme);
+    border-width: 2px;
+    padding: 11px 20px;
+}
+
+.bcu.btn.inverse:hover {
     background: var(--theme);
     color: var(--text);
 }
