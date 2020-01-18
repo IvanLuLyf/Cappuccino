@@ -1,4 +1,4 @@
-# Bunnies' Cappuccino UI
+![LOGO](logo.png)
 
 A lightweight CSS3 UI framework for fun.
 
