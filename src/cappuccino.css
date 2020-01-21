@@ -13,38 +13,41 @@
     --bcu-blue: #409eff;
     --bcu-blue-light: #3f93f3;
     --bcu-purple: #6f42c1;
-    --bcu-chino: #E1E1FA;
-    --bcu-chino-dark: #AFAFE1;
+    --bcu-chino: #afafe1;
+    --bcu-chino-light: #e1e1fA;
+    --bcu-chino-dark: #9494c5;
 }
 
 .bcu {
+    --theme: lightgrey;
+    --theme-2: gray;
+    --text: white;
+}
+
+.bcu.chino {
     --theme: var(--bcu-chino);
-    --theme-2: var(--bcu-chino-dark);
-    --text: #9494c5;
+    --theme-2: var(--bcu-chino-light);
+    --text: var(--bcu-chino-dark);
 }
 
 .bcu.red {
     --theme: var(--bcu-red);
     --theme-2: var(--bcu-red-light);
-    --text: white;
 }
 
 .bcu.pink {
     --theme: var(--bcu-pink);
     --theme-2: var(--bcu-pink-light);
-    --text: white;
 }
 
 .bcu.orange {
     --theme: var(--bcu-orange);
     --theme-2: var(--bcu-orange-light);
-    --text: white;
 }
 
 .bcu.blue {
     --theme: var(--bcu-blue);
     --theme-2: var(--bcu-blue-light);
-    --text: white;
 }
 
 .bcu.btn {
@@ -80,18 +83,6 @@
 }
 
 .bcu.btn.outline:hover {
-    background: var(--theme);
-    color: var(--text);
-}
-
-.bcu.btn.inverse {
-    background: black;
-    color: var(--theme);
-    border-width: 2px;
-    padding: 11px 20px;
-}
-
-.bcu.btn.inverse:hover {
     background: var(--theme);
     color: var(--text);
 }
