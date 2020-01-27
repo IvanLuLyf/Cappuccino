@@ -1,18 +1,25 @@
 :root {
     --bcu-red: #dc3545;
-    --bcu-red-light: #f53748;
-    --bcu-red-dark: #b62a38;
+    --bcu-red-light: #f04959;
+    --bcu-red-dark: #c82131;
     --bcu-pink: #e83e8c;
-    --bcu-pink-light: #ff40a1;
-    --bcu-pink-dark: #ce3e76;
+    --bcu-pink-light: #fc52a0;
+    --bcu-pink-dark: #d42a78;
     --bcu-orange: #fd7e14;
-    --bcu-orange-light: #ffa300;
-    --bcu-orange-dark: #e97514;
+    --bcu-orange-light: #ff9228;
+    --bcu-orange-dark: #e96a00;
     --bcu-yellow: #ffc107;
+    --bcu-yellow-light: #ffd51b;
+    --bcu-yellow-dark: #ebad00;
     --bcu-green: #28a745;
+    --bcu-green-light: #3cbb59;
+    --bcu-green-dark: #149331;
     --bcu-blue: #409eff;
-    --bcu-blue-light: #3f93f3;
+    --bcu-blue-light: #54b2ff;
+    --bcu-blue-dark: #2c8aeb;
     --bcu-purple: #6f42c1;
+    --bcu-purple-light: #8356d5;
+    --bcu-purple-dark: #5b2ead;
 }
 
 body {
@@ -47,9 +54,24 @@ body {
     --primary-hover: var(--bcu-orange-light);
 }
 
+.bcu.yellow {
+    --primary: var(--bcu-yellow);
+    --primary-hover: var(--bcu-yellow-light);
+}
+
+.bcu.green {
+    --primary: var(--bcu-green);
+    --primary-hover: var(--bcu-green-light);
+}
+
 .bcu.blue {
     --primary: var(--bcu-blue);
     --primary-hover: var(--bcu-blue-light);
+}
+
+.bcu.purple {
+    --primary: var(--bcu-purple);
+    --primary-hover: var(--bcu-purple-light);
 }
 
 .bcu.btn {
