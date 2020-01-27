@@ -13,77 +13,80 @@
     --bcu-blue: #409eff;
     --bcu-blue-light: #3f93f3;
     --bcu-purple: #6f42c1;
-    --bcu-chino: #afafe1;
-    --bcu-chino-light: #e1e1fA;
-    --bcu-chino-dark: #9494c5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .bcu {
-    --theme: lightgrey;
-    --theme-2: gray;
+    --primary: lightgrey;
+    --primary-hover: gray;
     --text: white;
 }
 
 .bcu.chino {
-    --theme: var(--bcu-chino);
-    --theme-2: var(--bcu-chino-light);
-    --text: var(--bcu-chino-dark);
+    --primary: #e1e1fA;
+    --primary-hover: #afafe1;
+    --text: #9494c5;
 }
 
 .bcu.red {
-    --theme: var(--bcu-red);
-    --theme-2: var(--bcu-red-light);
+    --primary: var(--bcu-red);
+    --primary-hover: var(--bcu-red-light);
 }
 
 .bcu.pink {
-    --theme: var(--bcu-pink);
-    --theme-2: var(--bcu-pink-light);
+    --primary: var(--bcu-pink);
+    --primary-hover: var(--bcu-pink-light);
 }
 
 .bcu.orange {
-    --theme: var(--bcu-orange);
-    --theme-2: var(--bcu-orange-light);
+    --primary: var(--bcu-orange);
+    --primary-hover: var(--bcu-orange-light);
 }
 
 .bcu.blue {
-    --theme: var(--bcu-blue);
-    --theme-2: var(--bcu-blue-light);
+    --primary: var(--bcu-blue);
+    --primary-hover: var(--bcu-blue-light);
 }
 
 .bcu.btn {
     display: inline-block;
     box-shadow: none;
-    line-height: 1;
+    line-height: 1.25;
     white-space: nowrap;
     cursor: pointer;
-    background: var(--theme);
-    border: 1px solid var(--theme);
+    background: var(--primary);
+    border: 1px solid var(--primary);
     color: var(--text);
-    -webkit-appearance: none;
+    appearance: none;
     text-align: center;
     box-sizing: border-box;
     outline: none;
     margin: 0;
     transition: .1s;
-    font-weight: 500;
-    padding: 12px 20px;
-    font-size: 14px;
-    border-radius: 4px;
+    font-weight: 400;
+    padding: 0.3rem 0.7rem;
+    font-size: 1rem;
+    border-radius: .25rem;
 }
 
 .bcu.btn:hover {
-    background: var(--theme-2);
-    border: 1px solid var(--theme-2);
+    background: var(--primary-hover);
+    border: 1px solid var(--primary-hover);
     color: var(--text);
 }
 
 .bcu.btn.outline {
     background: transparent;
-    color: var(--theme);
+    color: var(--primary);
 }
 
 .bcu.btn.outline:hover {
-    background: var(--theme);
+    background: var(--primary);
+    border-color: var(--primary);
     color: var(--text);
 }
 
@@ -93,6 +96,23 @@
 
 .bcu.btn.rect {
     border-radius: 0;
+}
+
+.bcu.btn.sm {
+    font-size: 0.8rem;
+}
+
+.bcu.btn.md {
+    font-size: 1.2rem;
+}
+
+.bcu.btn.lg {
+    font-size: 1.5rem;
+}
+
+.bcu.btn.block {
+    display: block;
+    width: 100%;
 }
 
 .bcu.ani-bound:hover {
