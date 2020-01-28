@@ -176,6 +176,49 @@ body {
     outline: 0;
 }
 
+.bcu.checkbox {
+    position: relative;
+    display: inline-block;
+}
+
+.bcu.checkbox label {
+    box-sizing: border-box;
+}
+
+.bcu.checkbox label::before {
+    position: absolute;
+    display: block;
+    border-radius: .25rem;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 1.05rem;
+    content: "";
+    background-color: #fff;
+    border: #adb5bd solid 1px;
+}
+
+.bcu.checkbox input[type=checkbox]:checked ~ label::before {
+    border-color: var(--primary);
+    background-color: var(--primary);
+}
+
+.bcu.checkbox input[type=checkbox]:checked ~ label::after {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    top: 0.15rem;
+    width: 0.2rem;
+    height: 0.5rem;
+    border: solid var(--text);
+    border-width: 0 0.2rem 0.2rem 0;
+    transform: rotate(45deg);
+}
+
+.bcu.checkbox input[type="checkbox"] {
+    visibility: hidden;
+}
+
 .bcu.ani-bound:hover {
     animation: bound 1.0s linear 0s 1;
 }
