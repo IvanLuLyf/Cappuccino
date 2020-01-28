@@ -156,6 +156,26 @@ body {
     width: 100%;
 }
 
+.bcu.input {
+    display: block;
+    width: 100%;
+    padding: .3rem .7rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    box-sizing: border-box;
+}
+
+.bcu.input:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+}
+
 .bcu.ani-bound:hover {
     animation: bound 1.0s linear 0s 1;
 }
