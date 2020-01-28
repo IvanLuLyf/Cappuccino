@@ -29,49 +29,58 @@ body {
 
 .bcu {
     --primary: lightgrey;
-    --primary-hover: gray;
+    --primary-hover: darkgrey;
+    --primary-active: grey;
     --text: white;
 }
 
 .bcu.chino {
     --primary: #e1e1fA;
-    --primary-hover: #afafe1;
+    --primary-hover: #f5f5ff;
+    --primary-active: #cdcde6;
     --text: #9494c5;
 }
 
 .bcu.red {
     --primary: var(--bcu-red);
     --primary-hover: var(--bcu-red-light);
+    --primary-active: var(--bcu-red-dark);
 }
 
 .bcu.pink {
     --primary: var(--bcu-pink);
     --primary-hover: var(--bcu-pink-light);
+    --primary-active: var(--bcu-pink-dark);
 }
 
 .bcu.orange {
     --primary: var(--bcu-orange);
     --primary-hover: var(--bcu-orange-light);
+    --primary-active: var(--bcu-orange-dark);
 }
 
 .bcu.yellow {
     --primary: var(--bcu-yellow);
     --primary-hover: var(--bcu-yellow-light);
+    --primary-active: var(--bcu-yellow-dark);
 }
 
 .bcu.green {
     --primary: var(--bcu-green);
     --primary-hover: var(--bcu-green-light);
+    --primary-active: var(--bcu-green-dark);
 }
 
 .bcu.blue {
     --primary: var(--bcu-blue);
     --primary-hover: var(--bcu-blue-light);
+    --primary-active: var(--bcu-blue-dark);
 }
 
 .bcu.purple {
     --primary: var(--bcu-purple);
     --primary-hover: var(--bcu-purple-light);
+    --primary-active: var(--bcu-purple-dark);
 }
 
 .bcu.btn {
@@ -101,6 +110,10 @@ body {
     color: var(--text);
 }
 
+.bcu.btn:active {
+    background: var(--primary-active);
+}
+
 .bcu.btn.outline {
     background: transparent;
     color: var(--primary);
@@ -109,6 +122,12 @@ body {
 .bcu.btn.outline:hover {
     background: var(--primary);
     border-color: var(--primary);
+    color: var(--text);
+}
+
+.bcu.btn.outline:active {
+    background: var(--primary-active);
+    border-color: var(--primary-active);
     color: var(--text);
 }
 
