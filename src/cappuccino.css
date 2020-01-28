@@ -35,7 +35,7 @@ body {
 }
 
 .bcu.chino {
-    --primary: #e1e1fA;
+    --primary: #e1e1fa;
     --primary-hover: #f5f5ff;
     --primary-active: #cdcde6;
     --text: #9494c5;
@@ -93,6 +93,9 @@ body {
     border: 1px solid var(--primary);
     color: var(--text);
     appearance: none;
+    user-select: none;
+    -webkit-appearance: button;
+    -moz-appearance: button;
     text-align: center;
     box-sizing: border-box;
     outline: none;
