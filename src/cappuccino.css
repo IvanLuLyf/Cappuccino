@@ -22,6 +22,14 @@
     --bcu-purple-dark: #5b2ead;
 }
 
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -92,12 +100,8 @@ body {
     background: var(--primary);
     border: 1px solid var(--primary);
     color: var(--text);
-    appearance: none;
     user-select: none;
-    -webkit-appearance: button;
-    -moz-appearance: button;
     text-align: center;
-    box-sizing: border-box;
     outline: none;
     margin: 0;
     transition: .1s;
@@ -107,6 +111,7 @@ body {
     border-radius: .25rem;
 }
 
+.bcu.btn:focus,
 .bcu.btn:hover {
     background: var(--primary-hover);
     border: 1px solid var(--primary-hover);
@@ -115,6 +120,7 @@ body {
 
 .bcu.btn:active {
     background: var(--primary-active);
+    border: 1px solid var(--primary-active);
 }
 
 .bcu.btn.outline {
@@ -122,6 +128,7 @@ body {
     color: var(--primary);
 }
 
+.bcu.btn.outline:focus,
 .bcu.btn.outline:hover {
     background: var(--primary);
     border-color: var(--primary);
@@ -169,7 +176,6 @@ body {
     background-color: white;
     border: 1px solid #ced4da;
     border-radius: .25rem;
-    box-sizing: border-box;
 }
 
 .bcu.input:focus {
@@ -185,7 +191,7 @@ body {
 }
 
 .bcu.checkbox label {
-    box-sizing: border-box;
+
 }
 
 .bcu.checkbox label::before {
@@ -194,8 +200,8 @@ body {
     border-radius: .25rem;
     top: 0;
     left: 0;
-    width: 1rem;
-    height: 1.05rem;
+    width: 1.2rem;
+    height: 1.2rem;
     content: "";
     background-color: #fff;
     border: #adb5bd solid 1px;
@@ -215,6 +221,7 @@ body {
     height: 0.5rem;
     border: solid var(--text);
     border-width: 0 0.2rem 0.2rem 0;
+    box-sizing: initial;
     transform: rotate(45deg);
 }
 
