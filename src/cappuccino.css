@@ -188,6 +188,7 @@ body {
 .bcu.checkbox {
     position: relative;
     display: inline-block;
+    margin-right: 1.2rem;
 }
 
 .bcu.checkbox label {
