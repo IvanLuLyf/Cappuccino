@@ -191,7 +191,7 @@ body {
 }
 
 .bcu.checkbox label {
-
+    margin-left: 0.3rem;
 }
 
 .bcu.checkbox label::before {
@@ -246,6 +246,36 @@ body {
 
 .bcu.checkbox input[type="checkbox"] {
     opacity: 0;
+}
+
+.bcu.checkbox.outline label:hover::before,
+.bcu.checkbox.outline input[type=checkbox]:focus ~ label::before {
+    background: white;
+    border-color: var(--primary-hover);
+}
+
+.bcu.checkbox.outline label:hover::after {
+    opacity: 0.5;
+}
+
+.bcu.checkbox.outline input[type=checkbox]:checked ~ label::before {
+    border-color: var(--primary);
+    background-color: white;
+}
+
+.bcu.checkbox.outline input[type=checkbox]:checked ~ label::after {
+    border-color: var(--primary);
+    opacity: 1;
+}
+
+.bcu.checkbox.outline input[type=checkbox]:checked ~ label:hover::before,
+.bcu.checkbox.outline input[type=checkbox]:checked:focus ~ label::before {
+    border-color: var(--primary-hover);
+}
+
+.bcu.checkbox.outline input[type=checkbox]:checked ~ label:hover::after {
+    border-color: var(--primary-hover);
+    opacity: 0.5;
 }
 
 .bcu.checkbox.round label::before {
