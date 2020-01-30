@@ -185,21 +185,23 @@ body {
     outline: 0;
 }
 
-.bcu.checkbox {
+.bcu.checkbox,
+.bcu.radio {
     position: relative;
     display: inline-block;
     margin-right: 1.2rem;
 }
 
-.bcu.checkbox label {
+.bcu.checkbox label,
+.bcu.radio label {
     vertical-align: top;
     display: inline-block;
 }
 
-.bcu.checkbox label::before {
+.bcu.checkbox label::before,
+.bcu.radio label::before {
     position: absolute;
     display: block;
-    border-radius: .25rem;
     top: 0;
     left: 0;
     width: 1.2rem;
@@ -207,6 +209,14 @@ body {
     content: "";
     background-color: #fff;
     border: #adb5bd solid 1px;
+}
+
+.bcu.checkbox label::before {
+    border-radius: .25rem;
+}
+
+.bcu.radio label::before {
+    border-radius: 50%;
 }
 
 .bcu.checkbox label::after {
@@ -223,30 +233,51 @@ body {
     opacity: 0;
 }
 
+.bcu.radio label::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: 0.3rem;
+    top: 0.3rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: var(--text);
+    box-sizing: initial;
+    opacity: 0;
+}
+
 .bcu.checkbox label:hover::before,
-.bcu.checkbox input[type=checkbox]:focus ~ label::before {
+.bcu.radio label:hover::before,
+.bcu.checkbox input[type=checkbox]:focus ~ label::before,
+.bcu.radio input[type=radio]:focus ~ label::before {
     background-color: var(--primary-hover);
 }
 
-.bcu.checkbox label:hover::after {
+.bcu.checkbox label:hover::after,
+.bcu.radio label:hover::after {
     opacity: 0.5;
 }
 
-.bcu.checkbox input[type=checkbox]:checked ~ label::before {
+.bcu.checkbox input[type=checkbox]:checked ~ label::before,
+.bcu.radio input[type=radio]:checked ~ label::before {
     border-color: var(--primary);
     background-color: var(--primary);
 }
 
 .bcu.checkbox input[type=checkbox]:checked ~ label:hover::before,
-.bcu.checkbox input[type=checkbox]:checked:focus ~ label::before {
+.bcu.radio input[type=radio]:checked ~ label:hover::before,
+.bcu.checkbox input[type=checkbox]:checked:focus ~ label::before,
+.bcu.radio input[type=radio]:checked:focus ~ label::before {
     background-color: var(--primary-hover);
 }
 
-.bcu.checkbox input[type=checkbox]:checked ~ label::after {
+.bcu.checkbox input[type=checkbox]:checked ~ label::after,
+.bcu.radio input[type=radio]:checked ~ label::after {
     opacity: 1;
 }
 
-.bcu.checkbox input[type="checkbox"] {
+.bcu.checkbox input[type=checkbox],
+.bcu.radio input[type=radio] {
     left: 0;
     z-index: -1;
     width: 1.2rem;
@@ -255,16 +286,20 @@ body {
 }
 
 .bcu.checkbox.outline label:hover::before,
-.bcu.checkbox.outline input[type=checkbox]:focus ~ label::before {
+.bcu.radio.outline label:hover::before,
+.bcu.checkbox.outline input[type=checkbox]:focus ~ label::before,
+.bcu.radio.outline input[type=radio]:focus ~ label::before {
     background: white;
     border-color: var(--primary-hover);
 }
 
-.bcu.checkbox.outline label:hover::after {
+.bcu.checkbox.outline label:hover::after,
+.bcu.radio.outline label:hover::after {
     opacity: 0.5;
 }
 
-.bcu.checkbox.outline input[type=checkbox]:checked ~ label::before {
+.bcu.checkbox.outline input[type=checkbox]:checked ~ label::before,
+.bcu.radio.outline input[type=radio]:checked ~ label::before {
     border-color: var(--primary);
     background-color: white;
 }
@@ -274,8 +309,18 @@ body {
     opacity: 1;
 }
 
+.bcu.radio.outline input[type=radio]:checked ~ label::after {
+    background-color: var(--primary);
+    opacity: 1;
+}
+
 .bcu.checkbox.outline input[type=checkbox]:checked ~ label:hover::before,
 .bcu.checkbox.outline input[type=checkbox]:checked:focus ~ label::before {
+    border-color: var(--primary-hover);
+}
+
+.bcu.radio.outline input[type=radio]:checked ~ label:hover::before,
+.bcu.radio.outline input[type=radio]:checked:focus ~ label::before {
     border-color: var(--primary-hover);
 }
 
@@ -284,11 +329,18 @@ body {
     opacity: 0.5;
 }
 
+.bcu.radio.outline input[type=radio]:checked ~ label:hover::after {
+    background-color: var(--primary-hover);
+    opacity: 0.5;
+}
+
 .bcu.checkbox.round label::before {
     border-radius: 50%;
 }
 
-.bcu.checkbox.rect label::before {
+.bcu.checkbox.rect label::before,
+.bcu.radio.rect label::before,
+.bcu.radio.rect label::after {
     border-radius: 0;
 }
 
