@@ -199,13 +199,13 @@ html {
 
 .bcu.checkbox label::before,
 .bcu.radio label::before {
+    content: '';
     position: absolute;
     display: block;
     top: 0;
     left: 0;
-    width: 1.2rem;
-    height: 1.2rem;
-    content: "";
+    width: 1.25rem;
+    height: 1.25rem;
     background-color: #fff;
     border: #adb5bd solid 1px;
 }
@@ -215,7 +215,7 @@ html {
 }
 
 .bcu.radio label::before {
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 .bcu.checkbox label::after {
@@ -227,7 +227,7 @@ html {
     height: 0.5rem;
     border: solid var(--text);
     border-width: 0 0.2rem 0.2rem 0;
-    box-sizing: initial;
+    box-sizing: content-box;
     transform: rotate(45deg);
     opacity: 0;
 }
@@ -236,12 +236,12 @@ html {
     content: "";
     position: absolute;
     border-radius: 50%;
-    left: 0.3rem;
-    top: 0.3rem;
-    width: 0.6rem;
-    height: 0.6rem;
+    left: 0.25rem;
+    top: 0.25rem;
+    width: 0.75rem;
+    height: 0.75rem;
     background: var(--text);
-    box-sizing: initial;
+    box-sizing: content-box;
     opacity: 0;
 }
 
