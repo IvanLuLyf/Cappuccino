@@ -23,16 +23,13 @@
 }
 
 *, ::after, ::before {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html {
     -webkit-tap-highlight-color: transparent;
-}
-
-body {
-    margin: 0;
-    padding: 0;
 }
 
 .bcu {
