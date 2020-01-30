@@ -219,7 +219,7 @@ html {
 }
 
 .bcu.checkbox label::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0.45rem;
     top: 0.25rem;
@@ -233,7 +233,7 @@ html {
 }
 
 .bcu.radio label::after {
-    content: "";
+    content: '';
     position: absolute;
     border-radius: 50%;
     left: 0.25rem;
