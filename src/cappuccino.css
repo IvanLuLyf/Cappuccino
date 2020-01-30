@@ -193,6 +193,7 @@ html {
 .bcu.radio label {
     vertical-align: top;
     display: inline-block;
+    margin-left: 0.2rem;
 }
 
 .bcu.checkbox label::before,
