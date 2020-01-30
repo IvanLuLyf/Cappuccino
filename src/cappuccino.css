@@ -229,7 +229,7 @@ html {
     border-width: 0 0.2rem 0.2rem 0;
     box-sizing: content-box;
     opacity: 0;
-    transform: scale(0) rotate(45deg);
+    transform: rotate(45deg);
     transition: all 0.2s ease;
 }
 
@@ -277,10 +277,6 @@ html {
 .bcu.checkbox input[type=checkbox]:checked ~ label::after,
 .bcu.radio input[type=radio]:checked ~ label::after {
     opacity: 1;
-}
-
-.bcu.checkbox input[type=checkbox]:checked ~ label::after {
-    transform: rotate(45deg) scale(1);
 }
 
 .bcu.radio input[type=radio]:checked ~ label::after {
