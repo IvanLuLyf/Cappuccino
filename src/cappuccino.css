@@ -186,6 +186,7 @@ html {
 .bcu.radio {
     position: relative;
     display: inline-block;
+    line-height: 1.2rem;
     margin-right: 1.2rem;
 }
 
