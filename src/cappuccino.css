@@ -228,8 +228,9 @@ html {
     border: solid var(--text);
     border-width: 0 0.2rem 0.2rem 0;
     box-sizing: content-box;
-    transform: rotate(45deg);
     opacity: 0;
+    transform: scale(0) rotate(45deg);
+    transition: all 0.2s ease;
 }
 
 .bcu.radio label::after {
@@ -243,13 +244,18 @@ html {
     background: var(--text);
     box-sizing: content-box;
     opacity: 0;
+    transform: scale(0);
+    transition: all 0.2s ease;
 }
 
 .bcu.checkbox label:hover::before,
-.bcu.radio label:hover::before,
+.bcu.radio label:hover::before {
+    background-color: var(--primary-hover);
+}
+
 .bcu.checkbox input[type=checkbox]:focus ~ label::before,
 .bcu.radio input[type=radio]:focus ~ label::before {
-    background-color: var(--primary-hover);
+    box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.5);;
 }
 
 .bcu.checkbox label:hover::after,
@@ -264,15 +270,21 @@ html {
 }
 
 .bcu.checkbox input[type=checkbox]:checked ~ label:hover::before,
-.bcu.radio input[type=radio]:checked ~ label:hover::before,
-.bcu.checkbox input[type=checkbox]:checked:focus ~ label::before,
-.bcu.radio input[type=radio]:checked:focus ~ label::before {
+.bcu.radio input[type=radio]:checked ~ label:hover::before {
     background-color: var(--primary-hover);
 }
 
 .bcu.checkbox input[type=checkbox]:checked ~ label::after,
 .bcu.radio input[type=radio]:checked ~ label::after {
     opacity: 1;
+}
+
+.bcu.checkbox input[type=checkbox]:checked ~ label::after {
+    transform: rotate(45deg) scale(1);
+}
+
+.bcu.radio input[type=radio]:checked ~ label::after {
+    transform: scale(1);
 }
 
 .bcu.checkbox input[type=checkbox],
@@ -285,9 +297,7 @@ html {
 }
 
 .bcu.checkbox.outline label:hover::before,
-.bcu.radio.outline label:hover::before,
-.bcu.checkbox.outline input[type=checkbox]:focus ~ label::before,
-.bcu.radio.outline input[type=radio]:focus ~ label::before {
+.bcu.radio.outline label:hover::before {
     background: white;
     border-color: var(--primary-hover);
 }
@@ -313,13 +323,11 @@ html {
     opacity: 1;
 }
 
-.bcu.checkbox.outline input[type=checkbox]:checked ~ label:hover::before,
-.bcu.checkbox.outline input[type=checkbox]:checked:focus ~ label::before {
+.bcu.checkbox.outline input[type=checkbox]:checked ~ label:hover::before {
     border-color: var(--primary-hover);
 }
 
-.bcu.radio.outline input[type=radio]:checked ~ label:hover::before,
-.bcu.radio.outline input[type=radio]:checked:focus ~ label::before {
+.bcu.radio.outline input[type=radio]:checked ~ label:hover::before {
     border-color: var(--primary-hover);
 }
 
