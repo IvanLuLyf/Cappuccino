@@ -347,6 +347,90 @@ html {
     border-radius: 0;
 }
 
+.bcu.switch {
+    position: relative;
+    display: inline-block;
+    line-height: 1.2rem;
+    margin-right: 1.2rem;
+}
+
+.bcu.switch input[type=checkbox] {
+    z-index: -1;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.bcu.switch label {
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 2.6rem;
+    position: relative;
+    transition: all 0.1s ease-in;
+}
+
+.bcu.switch label:after {
+    content: '';
+    background: #fafbfa;
+    position: absolute;
+    top: 0;
+    transition: box-shadow 0.1s ease-in;
+    left: 0;
+    width: 2.4rem;
+    height: 1.4rem;
+    border-radius: 1.2rem;
+    box-shadow: inset 0 0 0 0 #eee, 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.bcu.switch label:before {
+    content: '';
+    position: absolute;
+    background: white;
+    top: 0.1rem;
+    left: 0.1rem;
+    z-index: 999999;
+    width: 1.2rem;
+    transition: all 0.1s ease-in;
+    height: 1.2rem;
+    border-radius: 2rem;
+    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.bcu.switch input[type=checkbox]:active ~ label:after {
+    box-shadow: inset 0 0 0 20px #eee, 0 0 1px #eee;
+}
+
+.bcu.switch input[type=checkbox]:active ~ label:before {
+    width: 1.2rem;
+}
+
+.bcu.switch input[type=checkbox]:checked:active ~ label:before {
+    width: 1.2rem;
+    left: 0.8rem;
+}
+
+.bcu.switch input[type=checkbox] ~ label:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.bcu.switch input[type=checkbox]:checked ~ label:before {
+    content: '';
+    position: absolute;
+    left: 1.1rem;
+}
+
+.bcu.switch input[type=checkbox]:checked + label:after {
+    content: '';
+    position: absolute;
+    background: var(--primary);
+    box-shadow: 0 0 1px var(--primary-hover);
+}
+
+.bcu.switch.rect label::before,
+.bcu.switch.rect label::after {
+    border-radius: 0;
+}
+
 .bcu.ani-bound:hover {
     animation: bound 1.0s linear 0s 1;
 }
