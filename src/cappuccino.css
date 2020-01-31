@@ -88,6 +88,12 @@ html {
     --primary-active: var(--bcu-purple-dark);
 }
 
+.bcu.smoggy {
+    --primary: #6c7c96;
+    --primary-hover: #8090aa;
+    --primary-active: #586882;
+}
+
 .bcu.btn {
     display: inline-block;
     box-shadow: none;
