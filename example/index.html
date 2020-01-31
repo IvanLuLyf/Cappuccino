@@ -17,7 +17,8 @@
         }
 
         .bcu.checkbox,
-        .bcu.radio {
+        .bcu.radio,
+        .bcu.switch {
             margin: 0.2rem 1.2rem 0.2rem 0.2rem;
         }
     </style>
@@ -34,26 +35,31 @@
         let shapes = ['', ' round', ' rect'];
         let checkboxHtml = '';
         let radioHtml = '';
+        let switchHtml = '';
         let btnHtml = '';
 
         for (let i = 0; i < outlines.length; i++) {
             for (let j = 0; j < shapes.length; j++) {
                 checkboxHtml += '<div class="input-group">';
                 radioHtml += '<div class="input-group">';
+                switchHtml += '<div class="input-group">';
                 btnHtml += '<div class="input-group">';
                 for (let k = 0; k < colors.length; k++) {
                     checkboxHtml += `<div class="bcu checkbox ${outlines[i]}${shapes[j]}${colors[k]}"><input type="checkbox" id="ck${i}${j}${k}"/><label for="ck${i}${j}${k}">CheckBox</label></div>`;
                     radioHtml += `<div class="bcu radio ${outlines[i]}${shapes[j]}${colors[k]}"><input type="radio" id="r${i}${j}${k}" name="r${i}${j}"/><label for="r${i}${j}${k}">Radio</label></div>`;
+                    switchHtml += `<div class="bcu switch ${outlines[i]}${shapes[j]}${colors[k]}"><input type="checkbox" id="sw${i}${j}${k}"/><label for="sw${i}${j}${k}">Switch</label></div>`;
                     btnHtml += `<button type="button" class="bcu btn ${outlines[i]}${shapes[j]}${colors[k]}">Button</button>`;
                 }
                 checkboxHtml += '</div>';
                 radioHtml += '</div>';
+                switchHtml += '</div>';
                 btnHtml += '</div>';
             }
         }
-        example.innerHTML = (checkboxHtml + radioHtml + btnHtml);
+        example.innerHTML = (checkboxHtml + radioHtml + switchHtml + btnHtml);
     })();
 </script>
 </body>
 </html>
+
 
