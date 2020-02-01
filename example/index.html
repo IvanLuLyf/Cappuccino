@@ -30,7 +30,7 @@
 <script>
     (function () {
         let example = document.getElementById('example');
-        let colors = ['', ' chino', ' red', ' pink', ' orange', ' yellow', ' green', ' blue', ' purple', ' smoggy'];
+        let colors = ['default', 'chino', 'red', 'pink', 'orange', 'yellow', 'green', 'blue', 'purple', 'cherry', 'coffee'];
         let outlines = ['', ' outline'];
         let shapes = ['', ' round', ' rect'];
         let checkboxHtml = '';
@@ -45,10 +45,10 @@
                 switchHtml += '<div class="input-group">';
                 btnHtml += '<div class="input-group">';
                 for (let k = 0; k < colors.length; k++) {
-                    checkboxHtml += `<div class="bcu checkbox ${outlines[i]}${shapes[j]}${colors[k]}"><input type="checkbox" id="ck${i}${j}${k}"/><label for="ck${i}${j}${k}">CheckBox</label></div>`;
-                    radioHtml += `<div class="bcu radio ${outlines[i]}${shapes[j]}${colors[k]}"><input type="radio" id="r${i}${j}${k}" name="r${i}${j}"/><label for="r${i}${j}${k}">Radio</label></div>`;
-                    switchHtml += `<div class="bcu switch ${outlines[i]}${shapes[j]}${colors[k]}"><input type="checkbox" id="sw${i}${j}${k}"/><label for="sw${i}${j}${k}">Switch</label></div>`;
-                    btnHtml += `<button type="button" class="bcu btn ${outlines[i]}${shapes[j]}${colors[k]}">Button</button>`;
+                    checkboxHtml += `<div class="bcu checkbox ${outlines[i]} ${shapes[j]} ${colors[k]}"><input type="checkbox" id="ck${i}${j}${k}"/><label for="ck${i}${j}${k}">CheckBox</label></div>`;
+                    radioHtml += `<div class="bcu radio ${outlines[i]} ${shapes[j]} ${colors[k]}"><input type="radio" id="r${i}${j}${k}" name="r${i}${j}"/><label for="r${i}${j}${k}">Radio</label></div>`;
+                    switchHtml += `<div class="bcu switch ${outlines[i]} ${shapes[j]} ${colors[k]}"><input type="checkbox" id="sw${i}${j}${k}"/><label for="sw${i}${j}${k}">Switch</label></div>`;
+                    btnHtml += `<button type="button" class="bcu btn ${outlines[i]} ${shapes[j]} ${colors[k]}">${colors[k]}</button>`;
                 }
                 checkboxHtml += '</div>';
                 radioHtml += '</div>';
@@ -56,7 +56,7 @@
                 btnHtml += '</div>';
             }
         }
-        example.innerHTML = (checkboxHtml + radioHtml + switchHtml + btnHtml);
+        example.innerHTML = (btnHtml + checkboxHtml + radioHtml + switchHtml);
     })();
 </script>
 </body>

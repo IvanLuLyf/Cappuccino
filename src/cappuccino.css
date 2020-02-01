@@ -33,9 +33,9 @@ html {
 }
 
 .bcu {
-    --primary: lightgrey;
-    --primary-hover: darkgrey;
-    --primary-active: grey;
+    --primary: #6c7c96;
+    --primary-hover: #8090aa;
+    --primary-active: #586882;
     --text: white;
 }
 
@@ -88,10 +88,23 @@ html {
     --primary-active: var(--bcu-purple-dark);
 }
 
-.bcu.smoggy {
-    --primary: #6c7c96;
-    --primary-hover: #8090aa;
-    --primary-active: #586882;
+.bcu.cherry {
+    --primary: #f3aec0;
+    --primary-hover: #ffc2d4;
+    --primary-active: #df9aac;
+}
+
+.bcu.coffee {
+    --primary: #c3867a;
+    --primary-hover: #d79a8e;
+    --primary-active: #af7266;
+}
+
+.bcu.chino.outline {
+    --primary: #9494c5;
+    --primary-hover: #a8a8d9;
+    --primary-active: #8080b1;
+    --text: #e1e1fa;
 }
 
 .bcu.btn {
@@ -107,14 +120,17 @@ html {
     text-align: center;
     outline: none;
     margin: 0;
-    transition: .1s;
+    transition: all .2s ease;
     font-weight: 400;
     padding: 0.3rem 0.7rem;
     font-size: 1rem;
     border-radius: .25rem;
 }
 
-.bcu.btn:focus,
+.bcu.btn:focus {
+    box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.5);;
+}
+
 .bcu.btn:hover {
     background: var(--primary-hover);
     border: 1px solid var(--primary-hover);
@@ -131,7 +147,6 @@ html {
     color: var(--primary);
 }
 
-.bcu.btn.outline:focus,
 .bcu.btn.outline:hover {
     background: var(--primary);
     border-color: var(--primary);
@@ -401,6 +416,10 @@ html {
     border-radius: 2rem;
     box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.3);
     box-sizing: content-box;
+}
+
+.bcu.switch input[type=checkbox]:focus ~ label::before {
+    box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.5);;
 }
 
 .bcu.switch input[type=checkbox]:active ~ label:before {
