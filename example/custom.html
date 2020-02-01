@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Cappuccino Custom</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link href="../src/cappuccino.css" rel="stylesheet"/>
+    <style>
+        .input-group {
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .bcu.btn {
+            margin: 0.2rem;
+        }
+
+        .bcu.checkbox,
+        .bcu.radio,
+        .bcu.switch {
+            margin: 0.2rem 1.2rem 0.2rem 0.2rem;
+        }
+    </style>
+    <style type="text/css" id="themeTag">
+
+    </style>
+</head>
+<body>
+<div class="input-group">
+    <label for="in_color">Color:</label><input id="in_color" type="color"/>
+</div>
+<div id="example">
+
+</div>
+<script>
+    (function () {
+        function makeColor(col, amt) {
+            let usePound = false;
+            if (col[0] === "#") {
+                col = col.slice(1);
+                usePound = true;
+            }
+            let num = parseInt(col, 16);
+            let r = (num >> 16) + amt;
+            if (r > 255) r = 255;
+            else if (r < 0) r = 0;
+            let b = ((num >> 8) & 0x00FF) + amt;
+            if (b > 255) b = 255;
+            else if (b < 0) b = 0;
+            let g = (num & 0x0000FF) + amt;
+            if (g > 255) g = 255;
+            else if (g < 0) g = 0;
+            return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
+        }
+
+        let example = document.getElementById('example');
+        let colorIn = document.getElementById('in_color');
+        let themeTag = document.getElementById('themeTag');
+
+        let outlines = ['', ' outline'];
+        let shapes = ['', ' round', ' rect'];
+        let checkboxHtml = '';
+        let radioHtml = '';
+        let switchHtml = '';
+        let btnHtml = '';
+        checkboxHtml += '<div class="input-group">';
+        radioHtml += '<div class="input-group">';
+        switchHtml += '<div class="input-group">';
+        btnHtml += '<div class="input-group">';
+        for (let i = 0; i < outlines.length; i++) {
+            for (let j = 0; j < shapes.length; j++) {
+                checkboxHtml += `<div class="bcu checkbox ${outlines[i]} ${shapes[j]} custom"><input type="checkbox" id="ck${i}${j}"/><label for="ck${i}${j}">CheckBox</label></div>`;
+                radioHtml += `<div class="bcu radio ${outlines[i]} ${shapes[j]} custom"><input type="radio" id="r${i}${j}" name="r${i}${j}"/><label for="r${i}${j}">Radio</label></div>`;
+                switchHtml += `<div class="bcu switch ${outlines[i]} ${shapes[j]} custom"><input type="checkbox" id="sw${i}${j}"/><label for="sw${i}${j}">Switch</label></div>`;
+                btnHtml += `<button type="button" class="bcu btn ${outlines[i]} ${shapes[j]} custom">Button</button>`;
+            }
+        }
+        checkboxHtml += '</div>';
+        radioHtml += '</div>';
+        switchHtml += '</div>';
+        btnHtml += '</div>';
+        example.innerHTML = (btnHtml + checkboxHtml + radioHtml + switchHtml);
+
+        colorIn.addEventListener('change', ev => {
+            let color = colorIn.value;
+            let light = makeColor(color, 20);
+            let dark = makeColor(color, -20);
+            themeTag.innerText = `.bcu.custom{--primary: ${color};--primary-hover: ${light};--primary-active: ${dark};}`
+        })
+    })();
+</script>
+</body>
+</html>
+
+
