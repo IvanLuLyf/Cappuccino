@@ -149,7 +149,7 @@ html {
 }
 
 .bcu.btn.round {
-    border-radius: 30px;
+    border-radius: 3rem;
 }
 
 .bcu.btn.rect {
@@ -181,15 +181,24 @@ html {
     line-height: 1.5;
     color: #495057;
     background-color: white;
-    border: 1px solid #ced4da;
+    border: 1px solid var(--primary);
     border-radius: .25rem;
 }
 
 .bcu.input:focus {
     color: #495057;
     background-color: #fff;
-    border-color: #80bdff;
+    border-color: var(--primary-hover);
     outline: 0;
+    box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.5);;
+}
+
+.bcu.input.round {
+    border-radius: 3rem;
+}
+
+.bcu.input.rect {
+    border-radius: 0;
 }
 
 .bcu.checkbox,
