@@ -268,11 +268,6 @@ html {
     box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.5);;
 }
 
-.bcu.checkbox label:hover::after,
-.bcu.radio label:hover::after {
-    opacity: 0.5;
-}
-
 .bcu.checkbox input[type=checkbox]:checked ~ label::before,
 .bcu.radio input[type=radio]:checked ~ label::before {
     border-color: var(--primary);
@@ -408,11 +403,7 @@ html {
 }
 
 .bcu.switch input[type=checkbox]:focus ~ label::before {
-    box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.5);;
-}
-
-.bcu.switch input[type=checkbox]:active ~ label:before {
-    box-shadow: inset 0 0 0 20px #eee, 0 0 1px #eee;
+    box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.5);
 }
 
 .bcu.switch input[type=checkbox]:active ~ label:after {
@@ -423,7 +414,6 @@ html {
     content: '';
     position: absolute;
     background: var(--primary);
-    box-shadow: 0 0 1px var(--primary-hover);
 }
 
 .bcu.switch input[type=checkbox]:checked ~ label:after {
