@@ -1,25 +1,14 @@
 :root {
     --bcu-red: #dc3545;
-    --bcu-red-light: #f04959;
-    --bcu-red-dark: #c82131;
     --bcu-pink: #e83e8c;
-    --bcu-pink-light: #fc52a0;
-    --bcu-pink-dark: #d42a78;
     --bcu-orange: #fd7e14;
-    --bcu-orange-light: #ff9228;
-    --bcu-orange-dark: #e96a00;
     --bcu-yellow: #ffc107;
-    --bcu-yellow-light: #ffd51b;
-    --bcu-yellow-dark: #ebad00;
     --bcu-green: #28a745;
-    --bcu-green-light: #3cbb59;
-    --bcu-green-dark: #149331;
     --bcu-blue: #409eff;
-    --bcu-blue-light: #54b2ff;
-    --bcu-blue-dark: #2c8aeb;
     --bcu-purple: #6f42c1;
-    --bcu-purple-light: #8356d5;
-    --bcu-purple-dark: #5b2ead;
+    --bcu-smoggy: #6c7c96;
+    --bcu-chino: #e1e1fa;
+    --bcu-coffee: #c3867a;
 }
 
 *, ::after, ::before {
@@ -47,45 +36,45 @@ html {
 }
 
 .bcu.red {
-    --primary: var(--bcu-red);
-    --primary-hover: var(--bcu-red-light);
-    --primary-active: var(--bcu-red-dark);
+    --primary: #dc3545;
+    --primary-hover: #f04959;
+    --primary-active: #c82131;
 }
 
 .bcu.pink {
-    --primary: var(--bcu-pink);
-    --primary-hover: var(--bcu-pink-light);
-    --primary-active: var(--bcu-pink-dark);
+    --primary: #e83e8c;
+    --primary-hover: #fc52a0;
+    --primary-active: #d42a78;
 }
 
 .bcu.orange {
-    --primary: var(--bcu-orange);
-    --primary-hover: var(--bcu-orange-light);
-    --primary-active: var(--bcu-orange-dark);
+    --primary: #fd7e14;
+    --primary-hover: #ff9228;
+    --primary-active: #e96a00;
 }
 
 .bcu.yellow {
-    --primary: var(--bcu-yellow);
-    --primary-hover: var(--bcu-yellow-light);
-    --primary-active: var(--bcu-yellow-dark);
+    --primary: #ffc107;
+    --primary-hover: #ffd51b;
+    --primary-active: #ebad00;
 }
 
 .bcu.green {
-    --primary: var(--bcu-green);
-    --primary-hover: var(--bcu-green-light);
-    --primary-active: var(--bcu-green-dark);
+    --primary: #28a745;
+    --primary-hover: #3cbb59;
+    --primary-active: #149331;
 }
 
 .bcu.blue {
-    --primary: var(--bcu-blue);
-    --primary-hover: var(--bcu-blue-light);
-    --primary-active: var(--bcu-blue-dark);
+    --primary: #409eff;
+    --primary-hover: #54b2ff;
+    --primary-active: #2c8aeb;
 }
 
 .bcu.purple {
-    --primary: var(--bcu-purple);
-    --primary-hover: var(--bcu-purple-light);
-    --primary-active: var(--bcu-purple-dark);
+    --primary: #6f42c1;
+    --primary-hover: #8356d5;
+    --primary-active: #5b2ead;
 }
 
 .bcu.cherry {
