@@ -30,6 +30,7 @@
 <div class="input-group">
     <label for="in_color">Color:</label><input id="in_color" type="color"/>
 </div>
+<div id="txt_color" class="input-group"></div>
 <div id="example">
 
 </div>
@@ -76,6 +77,7 @@
         let example = document.getElementById('example');
         let colorIn = document.getElementById('in_color');
         let themeTag = document.getElementById('themeTag');
+        let txtColor = document.getElementById('txt_color');
 
         let outlines = ['', ' outline'];
         let shapes = ['', ' round', ' rect'];
@@ -102,6 +104,7 @@
         example.innerHTML = (btnHtml + checkboxHtml + radioHtml + switchHtml);
 
         colorIn.addEventListener('change', ev => {
+            txtColor.innerText = colorIn.value;
             let color = colorIn.value;
             let light = makeColor(color, 20);
             let dark = makeColor(color, -20);
