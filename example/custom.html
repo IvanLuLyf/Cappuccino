@@ -51,7 +51,26 @@
             let g = (num & 0x0000FF) + amt;
             if (g > 255) g = 255;
             else if (g < 0) g = 0;
-            return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
+            let hex = (g | (b << 8) | (r << 16)).toString(16);
+            let zeros = "000000".substr(0, 6 - hex.length);
+            return (usePound ? "#" : "") + zeros + hex;
+        }
+
+        function toRGB(hexColor) {
+            hexColor = hexColor.toLowerCase()
+            if (hexColor.substr(0, 1) === "#") hexColor = hexColor.substring(1);
+            let len = hexColor.length;
+            if (len !== 6 && len !== 3) return undefined;
+            else if (/[^0-9a-f]/i.test(hexColor)) return undefined;
+            let b = [];
+            for (let x = 0; x < 3; x++) {
+                b[0] = len === 6 ? hexColor.substr(x * 2, 2) : hexColor.substr(x, 1) + hexColor.substr(x, 1);
+                b[3] = "0123456789abcdef";
+                b[1] = b[0].substr(0, 1);
+                b[2] = b[0].substr(1, 1);
+                b[20 + x] = b[3].indexOf(b[1]) * 16 + b[3].indexOf(b[2])
+            }
+            return b[20] + "," + b[21] + "," + b[22];
         }
 
         let example = document.getElementById('example');
@@ -86,7 +105,8 @@
             let color = colorIn.value;
             let light = makeColor(color, 20);
             let dark = makeColor(color, -20);
-            themeTag.innerText = `.bcu.custom{--primary: ${color};--primary-hover: ${light};--primary-active: ${dark};}`
+            let focus = toRGB(color);
+            themeTag.innerText = `.bcu.custom{--primary: ${color};--primary-hover: ${light};--primary-active: ${dark};--primary-focus:rgba(${focus},0.5)}`
         })
     })();
 </script>
