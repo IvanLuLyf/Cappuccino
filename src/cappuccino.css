@@ -35,6 +35,12 @@ html {
     --text: #9494c5;
 }
 
+.bcu.cocoa {
+    --primary: #f0be8f;
+    --primary-hover: #ffd2a3;
+    --primary-active: #dcaa7b;
+}
+
 .bcu.red {
     --primary: #dc3545;
     --primary-hover: #f04959;
