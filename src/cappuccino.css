@@ -95,6 +95,12 @@ html {
     --primary-active: #af7266;
 }
 
+.bcu.mint {
+    --primary: #83c9bb;
+    --primary-hover: #97ddcf;
+    --primary-active: #6fb5a7;
+}
+
 .bcu.chino.outline {
     --primary: #9494c5;
     --primary-hover: #a8a8d9;
