@@ -25,6 +25,7 @@ html {
     --primary: #6c7c96;
     --primary-hover: #8090aa;
     --primary-active: #586882;
+    --primary-focus: #6c7c9680;
     --text: white;
 }
 
@@ -32,6 +33,7 @@ html {
     --primary: #e1e1fa;
     --primary-hover: #f5f5ff;
     --primary-active: #cdcde6;
+    --primary-focus: #9494c580;
     --text: #9494c5;
 }
 
@@ -39,66 +41,77 @@ html {
     --primary: #f0be8f;
     --primary-hover: #ffd2a3;
     --primary-active: #dcaa7b;
+    --primary-focus: #f0be8f80;
 }
 
 .bcu.red {
     --primary: #dc3545;
     --primary-hover: #f04959;
     --primary-active: #c82131;
+    --primary-focus: #dc354580;
 }
 
 .bcu.pink {
     --primary: #e83e8c;
     --primary-hover: #fc52a0;
     --primary-active: #d42a78;
+    --primary-focus: #e83e8c80;
 }
 
 .bcu.orange {
     --primary: #fd7e14;
     --primary-hover: #ff9228;
     --primary-active: #e96a00;
+    --primary-focus: #fd7e1480;
 }
 
 .bcu.yellow {
     --primary: #ffc107;
     --primary-hover: #ffd51b;
     --primary-active: #ebad00;
+    --primary-focus: #ffc10780;
 }
 
 .bcu.green {
     --primary: #28a745;
     --primary-hover: #3cbb59;
     --primary-active: #149331;
+    --primary-focus: #28a74580;
 }
 
 .bcu.blue {
     --primary: #409eff;
     --primary-hover: #54b2ff;
     --primary-active: #2c8aeb;
+    --primary-focus: #409eff80;
 }
 
 .bcu.purple {
     --primary: #6f42c1;
     --primary-hover: #8356d5;
     --primary-active: #5b2ead;
+    --primary-focus: #6f42c180;
 }
 
 .bcu.cherry {
     --primary: #f3aec0;
     --primary-hover: #ffc2d4;
     --primary-active: #df9aac;
+    --primary-focus: #f3aec080;
 }
 
 .bcu.coffee {
     --primary: #c3867a;
     --primary-hover: #d79a8e;
     --primary-active: #af7266;
+    --primary-focus: #c3867a80;
 }
 
 .bcu.mint {
     --primary: #83c9bb;
     --primary-hover: #97ddcf;
     --primary-active: #6fb5a7;
+    --primary-focus: #83c9bb80;
 }
 
 .bcu.chino.outline {
@@ -129,7 +142,7 @@ html {
 }
 
 .bcu.btn:focus {
-    box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.5);;
+    box-shadow: 0 0 0 2px var(--primary-focus);
 }
 
 .bcu.btn:hover {
@@ -202,7 +215,7 @@ html {
     background-color: #fff;
     border-color: var(--primary-hover);
     outline: 0;
-    box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.5);;
+    box-shadow: 0 0 0 2px var(--primary-focus);
 }
 
 .bcu.input.round {
@@ -286,7 +299,7 @@ html {
 
 .bcu.checkbox input[type=checkbox]:focus ~ label::before,
 .bcu.radio input[type=radio]:focus ~ label::before {
-    box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.5);;
+    box-shadow: 0 0 0 2px var(--primary-focus);
 }
 
 .bcu.checkbox input[type=checkbox]:checked ~ label::before,
@@ -424,7 +437,7 @@ html {
 }
 
 .bcu.switch input[type=checkbox]:focus ~ label::before {
-    box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.5);
+    box-shadow: 0 0 0 2px var(--primary-focus);
 }
 
 .bcu.switch input[type=checkbox]:active ~ label:after {
