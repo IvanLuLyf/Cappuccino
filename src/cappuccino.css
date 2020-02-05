@@ -8,7 +8,10 @@
     --bcu-purple: #6f42c1;
     --bcu-smoggy: #6c7c96;
     --bcu-chino: #e1e1fa;
+    --bcu-cocoa: #f0be8f;
+    --bcu-cherry: #f3aec0;
     --bcu-coffee: #c3867a;
+    --bcu-mint: #83c9bb;
 }
 
 *, ::after, ::before {
@@ -34,6 +37,7 @@ html {
     --primary: #e1e1fa;
     --primary-hover: #f5f5ff;
     --primary-active: #cdcde6;
+    --disabled: #f5f5ff;
     --primary-focus: rgba(148, 148, 197, 0.5);
     --text: #9494c5;
 }
@@ -42,83 +46,95 @@ html {
     --primary: #f0be8f;
     --primary-hover: #ffd2a3;
     --primary-active: #dcaa7b;
-    --primary-focus: rgba(240, 190, 143, 0.5);
+    --disabled: #fffacb;
+    --primary-focus: rgba(240, 190, 143, 0.5)
 }
 
 .bcu.red {
     --primary: #dc3545;
     --primary-hover: #f04959;
     --primary-active: #c82131;
-    --primary-focus: rgba(220, 53, 69, 0.5);
+    --disabled: #ff7181;
+    --primary-focus: rgba(220, 53, 69, 0.5)
 }
 
 .bcu.pink {
     --primary: #e83e8c;
     --primary-hover: #fc52a0;
     --primary-active: #d42a78;
-    --primary-focus: rgba(232, 62, 140, 0.5);
+    --disabled: #ff7ac8;
+    --primary-focus: rgba(232, 62, 140, 0.5)
 }
 
 .bcu.orange {
     --primary: #fd7e14;
     --primary-hover: #ff9228;
     --primary-active: #e96a00;
-    --primary-focus: rgba(253, 126, 20, 0.5);
+    --disabled: #ffba50;
+    --primary-focus: rgba(253, 126, 20, 0.5)
 }
 
 .bcu.yellow {
     --primary: #ffc107;
     --primary-hover: #ffd51b;
     --primary-active: #ebad00;
-    --primary-focus: rgba(255, 193, 7, 0.5);
+    --disabled: #fffd43;
+    --primary-focus: rgba(255, 193, 7, 0.5)
 }
 
 .bcu.green {
     --primary: #28a745;
     --primary-hover: #3cbb59;
     --primary-active: #149331;
-    --primary-focus: rgba(40, 167, 69, 0.5);
+    --disabled: #64e381;
+    --primary-focus: rgba(40, 167, 69, 0.5)
 }
 
 .bcu.blue {
     --primary: #409eff;
     --primary-hover: #54b2ff;
     --primary-active: #2c8aeb;
-    --primary-focus: rgba(64, 158, 255, 0.5);
+    --disabled: #7cdaff;
+    --primary-focus: rgba(64, 158, 255, 0.5)
 }
 
 .bcu.purple {
     --primary: #6f42c1;
     --primary-hover: #8356d5;
     --primary-active: #5b2ead;
-    --primary-focus: rgba(111, 66, 193, 0.5);
+    --disabled: #ab7efd;
+    --primary-focus: rgba(111, 66, 193, 0.5)
 }
 
 .bcu.cherry {
     --primary: #f3aec0;
     --primary-hover: #ffc2d4;
     --primary-active: #df9aac;
-    --primary-focus: rgba(243, 174, 192, 0.5);
+    --disabled: #ffeafc;
+    --primary-focus: rgba(243, 174, 192, 0.5)
 }
 
 .bcu.coffee {
     --primary: #c3867a;
     --primary-hover: #d79a8e;
     --primary-active: #af7266;
-    --primary-focus: rgba(195, 134, 122, 0.5);
+    --disabled: #ffc2b6;
+    --primary-focus: rgba(195, 134, 122, 0.5)
 }
 
 .bcu.mint {
     --primary: #83c9bb;
     --primary-hover: #97ddcf;
     --primary-active: #6fb5a7;
-    --primary-focus: rgba(131, 201, 187, 0.5);
+    --disabled: #bffff7;
+    --primary-focus: rgba(131, 201, 187, 0.5)
 }
 
 .bcu.chino.outline {
     --primary: #9494c5;
     --primary-hover: #a8a8d9;
     --primary-active: #8080b1;
+    --disabled: #a8a8d9;
     --text: #e1e1fa;
 }
 
