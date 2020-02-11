@@ -446,6 +446,7 @@ html {
 }
 
 .bcu.switch input[type=checkbox] {
+    position: absolute;
     z-index: -1;
     width: 0;
     height: 0;
