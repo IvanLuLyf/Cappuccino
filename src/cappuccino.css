@@ -479,7 +479,6 @@ html {
     background: white;
     top: 0.1rem;
     left: 0.1rem;
-    z-index: 999999;
     width: 1.2rem;
     transition: all 0.2s ease-in;
     height: 1.2rem;
