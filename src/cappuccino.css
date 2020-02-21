@@ -458,7 +458,7 @@ html {
 .bcu.switch label {
     vertical-align: middle;
     display: inline-block;
-    padding-left: 2.8rem;
+    padding-left: 3.0rem;
     transition: all 0.1s ease-in;
 }
 
@@ -469,7 +469,7 @@ html {
     top: 0;
     transition: box-shadow 0.1s ease-in, background 0.2s ease;
     left: 0;
-    width: 2.4rem;
+    width: 2.6rem;
     height: 1.4rem;
     border-radius: 1.2rem;
     box-shadow: inset 0 0 0 0 #eee, 0 0 1px rgba(0, 0, 0, 0.4);
@@ -509,21 +509,51 @@ html {
 }
 
 .bcu.switch input[type=checkbox]:checked ~ label:after {
-    content: '';
-    position: absolute;
-    left: 1.1rem;
+    left: 1.3rem;
 }
 
 .bcu.switch input[type=checkbox]:checked:active:not(:disabled) ~ label:after {
     width: 1.3rem;
     height: 1.1rem;
-    left: 0.9rem;
+    left: 1.1rem;
     top: 0.15rem;
+    background: #dcdddc;
 }
 
 .bcu.switch.rect label::before,
 .bcu.switch.rect label::after {
     border-radius: 0;
+}
+
+.bcu.switch.slim label:before {
+    top: 0.5rem;
+    height: 0.4rem;
+    left: 0.3rem;
+    width: 2.0rem;
+}
+
+.bcu.switch.slim label:after {
+    left: 0;
+}
+
+.bcu.switch.slim input[type=checkbox]:checked ~ label:after {
+    left: 1.5rem;
+}
+
+.bcu.switch.slim input[type=checkbox]:checked:not(:disabled) ~ label:before {
+    background: var(--primary-hover);
+}
+
+.bcu.switch.slim input[type=checkbox]:focus ~ label:after {
+    box-shadow: 0 0 0 2px var(--primary-focus);
+}
+
+.bcu.switch.slim input[type=checkbox]:checked ~ label:after {
+    background: var(--primary);
+}
+
+.bcu.switch.slim input[type=checkbox]:checked:active:not(:disabled) ~ label:after {
+    background: var(--primary-active);
 }
 
 .bcu.ani-bound:hover {
