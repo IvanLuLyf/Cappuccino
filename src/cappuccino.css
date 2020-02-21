@@ -439,6 +439,14 @@ html {
     border-radius: 0;
 }
 
+.bcu.radio.rounded label::before {
+    border-radius: .25rem;
+}
+
+.bcu.radio.rounded label::after {
+    border-radius: .15rem;
+}
+
 .bcu.switch {
     position: relative;
     display: inline-block;
@@ -523,6 +531,11 @@ html {
 .bcu.switch.rect label::before,
 .bcu.switch.rect label::after {
     border-radius: 0;
+}
+
+.bcu.switch.rounded label::before,
+.bcu.switch.rounded label::after {
+    border-radius: .25rem;
 }
 
 .bcu.switch.slim label:before {
