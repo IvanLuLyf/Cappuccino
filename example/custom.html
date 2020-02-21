@@ -9,7 +9,13 @@
     <style>
         .input-group {
             padding: 1rem;
-            box-sizing: border-box;
+        }
+
+        .code-block {
+            display: inline-block;
+            padding: 1rem;
+            background: #e3e3e3;
+            border-radius: 0.5rem;
         }
 
         .bcu.btn {
@@ -31,6 +37,9 @@
     <label for="in_color">Color:</label><input id="in_color" type="color"/>
 </div>
 <div id="txt_color" class="input-group"></div>
+<div class="input-group">
+    <pre id="txt_style" class="code-block"></pre>
+</div>
 <div id="example">
 
 </div>
@@ -58,7 +67,7 @@
         }
 
         function toRGB(hexColor) {
-            hexColor = hexColor.toLowerCase()
+            hexColor = hexColor.toLowerCase();
             if (hexColor.substr(0, 1) === "#") hexColor = hexColor.substring(1);
             let len = hexColor.length;
             if (len !== 6 && len !== 3) return undefined;
@@ -78,6 +87,7 @@
         let colorIn = document.getElementById('in_color');
         let themeTag = document.getElementById('themeTag');
         let txtColor = document.getElementById('txt_color');
+        let txtStyle = document.getElementById('txt_style');
 
         let outlines = ['', ' outline'];
         let shapes = ['', ' round', ' rect'];
@@ -93,7 +103,7 @@
             for (let j = 0; j < shapes.length; j++) {
                 checkboxHtml += `<div class="bcu checkbox ${outlines[i]} ${shapes[j]} custom"><input type="checkbox" id="ck${i}${j}"/><label for="ck${i}${j}">CheckBox</label></div>`;
                 radioHtml += `<div class="bcu radio ${outlines[i]} ${shapes[j]} custom"><input type="radio" id="r${i}${j}" name="r${i}${j}"/><label for="r${i}${j}">Radio</label></div>`;
-                switchHtml += `<div class="bcu switch ${outlines[i]} ${shapes[j]} custom"><input type="checkbox" id="sw${i}${j}"/><label for="sw${i}${j}">Switch</label></div>`;
+                switchHtml += `<div class="bcu switch ${outlines[i].replace('outline','slim')} ${shapes[j]} custom"><input type="checkbox" id="sw${i}${j}"/><label for="sw${i}${j}">Switch</label></div>`;
                 btnHtml += `<button type="button" class="bcu btn ${outlines[i]} ${shapes[j]} custom">Button</button>`;
             }
         }
@@ -103,14 +113,20 @@
         btnHtml += '</div>';
         example.innerHTML = (btnHtml + checkboxHtml + radioHtml + switchHtml);
 
+        colorIn.value = '#ffc725';
+        changeColor(colorIn.value);
+
         colorIn.addEventListener('change', ev => {
-            txtColor.innerText = colorIn.value;
-            let color = colorIn.value;
+            changeColor(colorIn.value);
+        });
+
+        function changeColor(color) {
+            txtColor.innerText = color;
             let light = makeColor(color, 20);
             let dark = makeColor(color, -20);
             let focus = toRGB(color);
-            themeTag.innerText = `.bcu.custom{--primary: ${color};--primary-hover: ${light};--primary-active: ${dark};--primary-focus:rgba(${focus},0.5)}`
-        })
+            txtStyle.innerText = themeTag.innerText = `.bcu.custom{\n    --primary: ${color};\n    --primary-hover: ${light};\n    --primary-active: ${dark};\n    --primary-focus:rgba(${focus},0.5);\n}`
+        }
     })();
 </script>
 </body>
