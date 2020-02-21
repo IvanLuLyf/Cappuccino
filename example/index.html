@@ -55,7 +55,7 @@
                 for (let k = 0; k < colors.length; k++) {
                     checkboxHtml += `<div class="bcu checkbox ${outlines[i]} ${shapes[j]} ${colors[k]}"><input type="checkbox" id="ck${i}${j}${k}"/><label for="ck${i}${j}${k}">CheckBox</label></div>`;
                     radioHtml += `<div class="bcu radio ${outlines[i]} ${shapes[j]} ${colors[k]}"><input type="radio" id="r${i}${j}${k}" name="r${i}${j}"/><label for="r${i}${j}${k}">Radio</label></div>`;
-                    switchHtml += `<div class="bcu switch ${outlines[i]} ${shapes[j]} ${colors[k]}"><input type="checkbox" id="sw${i}${j}${k}"/><label for="sw${i}${j}${k}">Switch</label></div>`;
+                    switchHtml += `<div class="bcu switch ${outlines[i].replace('outline', 'slim')} ${shapes[j]} ${colors[k]}"><input type="checkbox" id="sw${i}${j}${k}"/><label for="sw${i}${j}${k}">Switch</label></div>`;
                     btnHtml += `<button type="button" class="bcu btn ${outlines[i]} ${shapes[j]} ${colors[k]}">${colors[k]}</button>`;
                     txtHTML += `<div class="txt-inline"><input type="text" class="bcu input ${outlines[i]} ${shapes[j]} ${colors[k]}" placeholder="${colors[k]}"/></div>`
                 }
