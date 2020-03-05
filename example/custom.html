@@ -103,7 +103,7 @@
             for (let j = 0; j < shapes.length; j++) {
                 checkboxHtml += `<div class="bcu checkbox ${outlines[i]} ${shapes[j]} custom"><input type="checkbox" id="ck${i}${j}"/><label for="ck${i}${j}">CheckBox</label></div>`;
                 radioHtml += `<div class="bcu radio ${outlines[i]} ${shapes[j].replace('round', 'rounded')} custom"><input type="radio" id="r${i}${j}" name="rd"/><label for="r${i}${j}">Radio</label></div>`;
-                switchHtml += `<div class="bcu switch ${outlines[i].replace('outline','slim')} ${shapes[j].replace('round', 'rounded')} custom"><input type="checkbox" id="sw${i}${j}"/><label for="sw${i}${j}">Switch</label></div>`;
+                switchHtml += `<div class="bcu switch ${outlines[i].replace('outline', 'slim')} ${shapes[j].replace('round', 'rounded')} custom"><input type="checkbox" id="sw${i}${j}"/><label for="sw${i}${j}">Switch</label></div>`;
                 btnHtml += `<button type="button" class="bcu btn ${outlines[i]} ${shapes[j]} custom">Button</button>`;
             }
         }
@@ -124,8 +124,9 @@
             txtColor.innerText = color;
             let light = makeColor(color, 20);
             let dark = makeColor(color, -20);
+            let disabled = makeColor(color, 60);
             let focus = toRGB(color);
-            txtStyle.innerText = themeTag.innerText = `.bcu.custom{\n    --primary: ${color};\n    --primary-hover: ${light};\n    --primary-active: ${dark};\n    --primary-focus:rgba(${focus},0.5);\n}`
+            txtStyle.innerText = themeTag.innerText = `.bcu.custom{\n    --primary: ${color};\n    --primary-hover: ${light};\n    --primary-active: ${dark};\n    --disabled: ${disabled};\n    --primary-focus:rgba(${focus},0.5);\n}`
         }
     })();
 </script>
