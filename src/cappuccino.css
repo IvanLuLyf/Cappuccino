@@ -137,6 +137,14 @@ html {
     --primary-focus: rgba(236, 181, 235, 0.5);
 }
 
+.bcu.strawberry {
+    --primary: #f02064;
+    --primary-hover: #ff3478;
+    --primary-active: #dc0c50;
+    --disabled: #ff5ca0;
+    --primary-focus: rgba(240, 32, 100, 0.5)
+}
+
 .bcu.chino.outline {
     --primary: #9494c5;
     --primary-hover: #a8a8d9;
