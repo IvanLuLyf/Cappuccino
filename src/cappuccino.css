@@ -12,6 +12,8 @@
     --bcu-cherry: #f3aec0;
     --bcu-coffee: #c3867a;
     --bcu-mint: #83c9bb;
+    --bcu-taro: #ecb5eb;
+    --bcu-strawberry: #f02064;
 }
 
 *, ::after, ::before {
@@ -134,7 +136,8 @@ html {
     --primary: #ecb5eb;
     --primary-hover: #ffc9ff;
     --primary-active: #d8a1d7;
-    --primary-focus: rgba(236, 181, 235, 0.5);
+    --disabled: #fff1ff;
+    --primary-focus: rgba(236, 181, 235, 0.5)
 }
 
 .bcu.strawberry {
