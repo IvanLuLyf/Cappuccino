@@ -130,6 +130,13 @@ html {
     --primary-focus: rgba(131, 201, 187, 0.5)
 }
 
+.bcu.taro {
+    --primary: #ecb5eb;
+    --primary-hover: #ffc9ff;
+    --primary-active: #d8a1d7;
+    --primary-focus: rgba(236, 181, 235, 0.5);
+}
+
 .bcu.chino.outline {
     --primary: #9494c5;
     --primary-hover: #a8a8d9;
