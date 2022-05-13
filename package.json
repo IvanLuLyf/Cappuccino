@@ -1,0 +1,24 @@
+{
+  "name": "cappuccino-ui",
+  "version": "1.0.0",
+  "description": "a lightweight CSS3 UI library",
+  "files": [
+    "src/cappuccino.css"
+  ],
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bunniescc/Cappuccino.git"
+  },
+  "keywords": [
+    "Cappuchino",
+    "UI"
+  ],
+  "author": "IvanLu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bunniescc/Cappuccino/issues"
+  },
+  "homepage": "https://c.bunnies.cc/"
+}
