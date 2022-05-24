@@ -282,25 +282,23 @@ html {
 .bcu.checkbox,
 .bcu.radio {
     position: relative;
-    display: inline-block;
-    line-height: 1.2;
-    margin-right: 1.2rem;
+    display: inline-flex;
+    align-items: center;
 }
 
-.bcu.checkbox label,
-.bcu.radio label {
-    vertical-align: middle;
-    display: inline-block;
+.bcu.checkbox .bcu-handler,
+.bcu.radio .bcu-handler {
+    display: inline-flex;
     padding-left: 1.6em;
 }
 
-.bcu.checkbox input[type=checkbox]:disabled ~ label,
-.bcu.radio input[type=checkbox]:disabled ~ label {
+.bcu.checkbox input[type=checkbox]:disabled ~ .bcu-handler,
+.bcu.radio input[type=radio]:disabled ~ .bcu-handler {
     cursor: not-allowed;
 }
 
-.bcu.checkbox label::before,
-.bcu.radio label::before {
+.bcu.checkbox .bcu-handler::before,
+.bcu.radio .bcu-handler::before {
     content: '';
     position: absolute;
     display: block;
@@ -313,15 +311,15 @@ html {
     border: #adb5bd solid 1px;
 }
 
-.bcu.checkbox label::before {
+.bcu.checkbox .bcu-handler::before {
     border-radius: .25em;
 }
 
-.bcu.radio label::before {
+.bcu.radio .bcu-handler::before {
     border-radius: 100%;
 }
 
-.bcu.checkbox label::after {
+.bcu.checkbox .bcu-handler::after {
     content: '';
     position: absolute;
     left: 0.45em;
@@ -337,7 +335,7 @@ html {
     transition: all 0.2s ease;
 }
 
-.bcu.radio label::after {
+.bcu.radio .bcu-handler::after {
     content: '';
     position: absolute;
     border-radius: 50%;
@@ -353,39 +351,39 @@ html {
     transition: all 0.2s ease;
 }
 
-.bcu.checkbox input[type=checkbox]:not(:disabled) ~ label:hover::before,
-.bcu.radio input[type=radio]:not(:disabled) ~ label:hover::before {
+.bcu.checkbox input[type=checkbox]:not(:disabled) ~ .bcu-handler:hover::before,
+.bcu.radio input[type=radio]:not(:disabled) ~ .bcu-handler:hover::before {
     background-color: var(--primary-hover);
 }
 
-.bcu.checkbox input[type=checkbox]:focus ~ label::before,
-.bcu.radio input[type=radio]:focus ~ label::before {
+.bcu.checkbox input[type=checkbox]:focus ~ .bcu-handler::before,
+.bcu.radio input[type=radio]:focus ~ .bcu-handler::before {
     box-shadow: 0 0 0 2px var(--primary-focus);
 }
 
-.bcu.checkbox input[type=checkbox]:checked ~ label::before,
-.bcu.radio input[type=radio]:checked ~ label::before {
+.bcu.checkbox input[type=checkbox]:checked ~ .bcu-handler::before,
+.bcu.radio input[type=radio]:checked ~ .bcu-handler::before {
     border-color: var(--primary);
     background-color: var(--primary);
 }
 
-.bcu.checkbox input[type=checkbox]:checked:not(:disabled) ~ label:hover::before,
-.bcu.radio input[type=radio]:checked:not(:disabled) ~ label:hover::before {
+.bcu.checkbox input[type=checkbox]:checked:not(:disabled) ~ .bcu-handler:hover::before,
+.bcu.radio input[type=radio]:checked:not(:disabled) ~ .bcu-handler:hover::before {
     background-color: var(--primary-hover);
 }
 
-.bcu.checkbox input[type=checkbox]:checked:disabled ~ label::before,
-.bcu.radio input[type=radio]:checked:disabled ~ label::before {
+.bcu.checkbox input[type=checkbox]:checked:disabled ~ .bcu-handler::before,
+.bcu.radio input[type=radio]:checked:disabled ~ .bcu-handler::before {
     border-color: var(--disabled);
     background-color: var(--disabled);
 }
 
-.bcu.checkbox input[type=checkbox]:checked ~ label::after,
-.bcu.radio input[type=radio]:checked ~ label::after {
+.bcu.checkbox input[type=checkbox]:checked ~ .bcu-handler::after,
+.bcu.radio input[type=radio]:checked ~ .bcu-handler::after {
     opacity: 1;
 }
 
-.bcu.radio input[type=radio]:checked ~ label::after {
+.bcu.radio input[type=radio]:checked ~ .bcu-handler::after {
     transform: scale(1);
 }
 
@@ -399,80 +397,79 @@ html {
     position: absolute;
 }
 
-.bcu.checkbox.outline input[type=checkbox]:not(:disabled) ~ label:hover::before,
-.bcu.radio.outline input[type=radio]:not(:disabled) ~ label:hover::before {
+.bcu.checkbox.outline input[type=checkbox]:not(:disabled) ~ .bcu-handler:hover::before,
+.bcu.radio.outline input[type=radio]:not(:disabled) ~ .bcu-handler:hover::before {
     background: white;
     border-color: var(--primary-hover);
 }
 
-.bcu.checkbox.outline input[type=checkbox]:not(:disabled) ~ label:hover::after,
-.bcu.radio.outline input[type=radio]:not(:disabled) ~ label:hover::after {
+.bcu.checkbox.outline input[type=checkbox]:not(:disabled) ~ .bcu-handler:hover::after,
+.bcu.radio.outline input[type=radio]:not(:disabled) ~ .bcu-handler:hover::after {
     opacity: 0.5;
 }
 
-.bcu.checkbox.outline input[type=checkbox]:checked:not(:disabled) ~ label::before,
-.bcu.radio.outline input[type=radio]:checked:not(:disabled) ~ label::before {
+.bcu.checkbox.outline input[type=checkbox]:checked:not(:disabled) ~ .bcu-handler::before,
+.bcu.radio.outline input[type=radio]:checked:not(:disabled) ~ .bcu-handler::before {
     border-color: var(--primary);
     background-color: white;
 }
 
-.bcu.checkbox.outline input[type=checkbox]:disabled ~ label::before,
-.bcu.radio.outline input[type=radio]:disabled ~ label::before {
+.bcu.checkbox.outline input[type=checkbox]:disabled ~ .bcu-handler::before,
+.bcu.radio.outline input[type=radio]:disabled ~ .bcu-handler::before {
     background: white;
     border-color: #adb5bd;
 }
 
-.bcu.checkbox.outline input[type=checkbox]:checked ~ label::after {
+.bcu.checkbox.outline input[type=checkbox]:checked ~ .bcu-handler::after {
     border-color: var(--primary);
     opacity: 1;
 }
 
-.bcu.radio.outline input[type=radio]:checked ~ label::after {
+.bcu.radio.outline input[type=radio]:checked ~ .bcu-handler::after {
     background-color: var(--primary);
     opacity: 1;
 }
 
-.bcu.checkbox.outline input[type=checkbox]:checked:not(:disabled) ~ label:hover::before {
+.bcu.checkbox.outline input[type=checkbox]:checked:not(:disabled) ~ .bcu-handler:hover::before {
     border-color: var(--primary-hover);
 }
 
-.bcu.radio.outline input[type=radio]:checked:not(:disabled) ~ label:hover::before {
+.bcu.radio.outline input[type=radio]:checked:not(:disabled) ~ .bcu-handler:hover::before {
     border-color: var(--primary-hover);
 }
 
-.bcu.checkbox.outline input[type=checkbox]:checked:not(:disabled) ~ label:hover::after {
+.bcu.checkbox.outline input[type=checkbox]:checked:not(:disabled) ~ .bcu-handler:hover::after {
     border-color: var(--primary-hover);
     opacity: 0.5;
 }
 
-.bcu.radio.outline input[type=radio]:checked:not(:disabled) ~ label:hover::after {
+.bcu.radio.outline input[type=radio]:checked:not(:disabled) ~ .bcu-handler:hover::after {
     background-color: var(--primary-hover);
     opacity: 0.5;
 }
 
-.bcu.checkbox.round label::before {
+.bcu.checkbox.round .bcu-handler::before {
     border-radius: 50%;
 }
 
-.bcu.checkbox.rect label::before,
-.bcu.radio.rect label::before,
-.bcu.radio.rect label::after {
+.bcu.checkbox.rect .bcu-handler::before,
+.bcu.radio.rect .bcu-handler::before,
+.bcu.radio.rect .bcu-handler::after {
     border-radius: 0;
 }
 
-.bcu.radio.rounded label::before {
+.bcu.radio.rounded .bcu-handler::before {
     border-radius: .25em;
 }
 
-.bcu.radio.rounded label::after {
+.bcu.radio.rounded .bcu-handler::after {
     border-radius: .15em;
 }
 
 .bcu.switch {
     position: relative;
-    display: inline-block;
-    line-height: 1.2;
-    margin-right: 1.2rem;
+    display: inline-flex;
+    align-items: center;
 }
 
 .bcu.switch input[type=checkbox] {
@@ -484,14 +481,18 @@ html {
     position: absolute;
 }
 
-.bcu.switch label {
+.bcu.switch .bcu-handler {
     vertical-align: middle;
-    display: inline-block;
+    display: inline-flex;
     padding-left: 3em;
     transition: all 0.1s ease-in;
 }
 
-.bcu.switch label:before {
+.bcu.switch input[type=checkbox]:disabled ~ .bcu-handler {
+    cursor: not-allowed;
+}
+
+.bcu.switch .bcu-handler:before {
     content: '';
     background: #fafbfa;
     position: absolute;
@@ -505,7 +506,7 @@ html {
     box-shadow: inset 0 0 0 0 #eee, 0 0 1px rgba(0, 0, 0, 0.4);
 }
 
-.bcu.switch label:after {
+.bcu.switch .bcu-handler:after {
     content: '';
     position: absolute;
     background: white;
@@ -520,30 +521,30 @@ html {
     box-sizing: content-box;
 }
 
-.bcu.switch input[type=checkbox]:focus ~ label::before {
+.bcu.switch input[type=checkbox]:focus ~ .bcu-handler::before {
     box-shadow: 0 0 0 2px var(--primary-focus);
 }
 
-.bcu.switch input[type=checkbox]:active:not(:disabled) ~ label:after {
+.bcu.switch input[type=checkbox]:active:not(:disabled) ~ .bcu-handler:after {
     width: 1.3em;
     height: 1.1em;
     left: 0.2em;
     margin-top: -0.55em;
 }
 
-.bcu.switch input[type=checkbox]:checked:not(:disabled) ~ label:before {
+.bcu.switch input[type=checkbox]:checked:not(:disabled) ~ .bcu-handler:before {
     background: var(--primary);
 }
 
-.bcu.switch input[type=checkbox]:checked:disabled ~ label:before {
+.bcu.switch input[type=checkbox]:checked:disabled ~ .bcu-handler:before {
     background: var(--disabled);
 }
 
-.bcu.switch input[type=checkbox]:checked ~ label:after {
-    left: 1.3em;
+.bcu.switch input[type=checkbox]:checked ~ .bcu-handler:after {
+    left: 1.25em;
 }
 
-.bcu.switch input[type=checkbox]:checked:active:not(:disabled) ~ label:after {
+.bcu.switch input[type=checkbox]:checked:active:not(:disabled) ~ .bcu-handler:after {
     width: 1.3em;
     height: 1.1em;
     left: 1.1em;
@@ -551,44 +552,44 @@ html {
     background: #dcdddc;
 }
 
-.bcu.switch.rect label::before,
-.bcu.switch.rect label::after {
+.bcu.switch.rect .bcu-handler::before,
+.bcu.switch.rect .bcu-handler::after {
     border-radius: 0;
 }
 
-.bcu.switch.rounded label::before,
-.bcu.switch.rounded label::after {
+.bcu.switch.rounded .bcu-handler::before,
+.bcu.switch.rounded .bcu-handler::after {
     border-radius: .25em;
 }
 
-.bcu.switch.slim label:before {
+.bcu.switch.slim .bcu-handler:before {
     margin-top: -0.2em;
     height: 0.4em;
     left: 0.3em;
     width: 2.0em;
 }
 
-.bcu.switch.slim label:after {
+.bcu.switch.slim .bcu-handler:after {
     left: 0;
 }
 
-.bcu.switch.slim input[type=checkbox]:checked ~ label:after {
+.bcu.switch.slim input[type=checkbox]:checked ~ .bcu-handler:after {
     left: 1.5em;
 }
 
-.bcu.switch.slim input[type=checkbox]:checked:not(:disabled) ~ label:before {
+.bcu.switch.slim input[type=checkbox]:checked:not(:disabled) ~ .bcu-handler:before {
     background: var(--primary-hover);
 }
 
-.bcu.switch.slim input[type=checkbox]:focus ~ label:after {
+.bcu.switch.slim input[type=checkbox]:focus ~ .bcu-handler:after {
     box-shadow: 0 0 0 2px var(--primary-focus);
 }
 
-.bcu.switch.slim input[type=checkbox]:checked ~ label:after {
+.bcu.switch.slim input[type=checkbox]:checked ~ .bcu-handler:after {
     background: var(--primary);
 }
 
-.bcu.switch.slim input[type=checkbox]:checked:active:not(:disabled) ~ label:after {
+.bcu.switch.slim input[type=checkbox]:checked:active:not(:disabled) ~ .bcu-handler:after {
     background: var(--primary-active);
 }
 
