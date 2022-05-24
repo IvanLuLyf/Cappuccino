@@ -283,7 +283,7 @@ html {
 .bcu.radio {
     position: relative;
     display: inline-block;
-    line-height: 1.2rem;
+    line-height: 1.2;
     margin-right: 1.2rem;
 }
 
@@ -291,7 +291,7 @@ html {
 .bcu.radio label {
     vertical-align: middle;
     display: inline-block;
-    padding-left: 1.6rem;
+    padding-left: 1.6em;
 }
 
 .bcu.checkbox input[type=checkbox]:disabled ~ label,
@@ -304,16 +304,17 @@ html {
     content: '';
     position: absolute;
     display: block;
-    top: 0.1rem;
+    top: 50%;
+    margin-top: -0.625em;
     left: 0;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.25em;
+    height: 1.25em;
     background-color: white;
     border: #adb5bd solid 1px;
 }
 
 .bcu.checkbox label::before {
-    border-radius: .25rem;
+    border-radius: .25em;
 }
 
 .bcu.radio label::before {
@@ -323,12 +324,13 @@ html {
 .bcu.checkbox label::after {
     content: '';
     position: absolute;
-    left: 0.45rem;
-    top: 0.3rem;
-    width: 0.2rem;
-    height: 0.5rem;
+    left: 0.45em;
+    top: 50%;
+    margin-top: -0.4em;
+    width: 0.2em;
+    height: 0.5em;
     border: solid var(--text);
-    border-width: 0 0.2rem 0.2rem 0;
+    border-width: 0 0.2em 0.2em 0;
     box-sizing: content-box;
     opacity: 0;
     transform: rotate(45deg);
@@ -339,10 +341,11 @@ html {
     content: '';
     position: absolute;
     border-radius: 50%;
-    left: 0.25rem;
-    top: 0.35rem;
-    width: 0.75rem;
-    height: 0.75rem;
+    left: 0.25em;
+    top: 50%;
+    margin-top: -0.375em;
+    width: 0.75em;
+    height: 0.75em;
     background: var(--text);
     box-sizing: content-box;
     opacity: 0;
@@ -390,8 +393,8 @@ html {
 .bcu.radio input[type=radio] {
     left: 0;
     z-index: -1;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.2em;
+    height: 1.2em;
     opacity: 0;
     position: absolute;
 }
@@ -458,25 +461,25 @@ html {
 }
 
 .bcu.radio.rounded label::before {
-    border-radius: .25rem;
+    border-radius: .25em;
 }
 
 .bcu.radio.rounded label::after {
-    border-radius: .15rem;
+    border-radius: .15em;
 }
 
 .bcu.switch {
     position: relative;
     display: inline-block;
-    line-height: 1.2rem;
+    line-height: 1.2;
     margin-right: 1.2rem;
 }
 
 .bcu.switch input[type=checkbox] {
     left: 0;
     z-index: -1;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.2em;
+    height: 1.2em;
     opacity: 0;
     position: absolute;
 }
@@ -484,7 +487,7 @@ html {
 .bcu.switch label {
     vertical-align: middle;
     display: inline-block;
-    padding-left: 3.0rem;
+    padding-left: 3em;
     transition: all 0.1s ease-in;
 }
 
@@ -492,12 +495,13 @@ html {
     content: '';
     background: #fafbfa;
     position: absolute;
-    top: 0;
+    top: 50%;
+    margin-top: -0.7em;
     transition: box-shadow 0.1s ease-in, background 0.2s ease;
     left: 0;
-    width: 2.6rem;
-    height: 1.4rem;
-    border-radius: 1.2rem;
+    width: 2.6em;
+    height: 1.4em;
+    border-radius: 1.2em;
     box-shadow: inset 0 0 0 0 #eee, 0 0 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -505,12 +509,13 @@ html {
     content: '';
     position: absolute;
     background: white;
-    top: 0.1rem;
-    left: 0.1rem;
-    width: 1.2rem;
+    top: 50%;
+    margin-top: -0.6em;
+    left: 0.1em;
+    width: 1.2em;
     transition: all 0.2s ease-in;
-    height: 1.2rem;
-    border-radius: 2rem;
+    height: 1.2em;
+    border-radius: 2em;
     box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.3);
     box-sizing: content-box;
 }
@@ -520,10 +525,10 @@ html {
 }
 
 .bcu.switch input[type=checkbox]:active:not(:disabled) ~ label:after {
-    width: 1.3rem;
-    height: 1.1rem;
-    left: 0.2rem;
-    top: 0.15rem;
+    width: 1.3em;
+    height: 1.1em;
+    left: 0.2em;
+    margin-top: -0.55em;
 }
 
 .bcu.switch input[type=checkbox]:checked:not(:disabled) ~ label:before {
@@ -535,14 +540,14 @@ html {
 }
 
 .bcu.switch input[type=checkbox]:checked ~ label:after {
-    left: 1.3rem;
+    left: 1.3em;
 }
 
 .bcu.switch input[type=checkbox]:checked:active:not(:disabled) ~ label:after {
-    width: 1.3rem;
-    height: 1.1rem;
-    left: 1.1rem;
-    top: 0.15rem;
+    width: 1.3em;
+    height: 1.1em;
+    left: 1.1em;
+    margin-top: -0.55em;
     background: #dcdddc;
 }
 
@@ -553,14 +558,14 @@ html {
 
 .bcu.switch.rounded label::before,
 .bcu.switch.rounded label::after {
-    border-radius: .25rem;
+    border-radius: .25em;
 }
 
 .bcu.switch.slim label:before {
-    top: 0.5rem;
-    height: 0.4rem;
-    left: 0.3rem;
-    width: 2.0rem;
+    margin-top: -0.2em;
+    height: 0.4em;
+    left: 0.3em;
+    width: 2.0em;
 }
 
 .bcu.switch.slim label:after {
@@ -568,7 +573,7 @@ html {
 }
 
 .bcu.switch.slim input[type=checkbox]:checked ~ label:after {
-    left: 1.5rem;
+    left: 1.5em;
 }
 
 .bcu.switch.slim input[type=checkbox]:checked:not(:disabled) ~ label:before {
